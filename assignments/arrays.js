@@ -104,7 +104,7 @@ let oldCars = [];
     oldCars.push(carYears[i]);
   }
 }
-console.log(oldCars);
+console.log(oldCars.length);
 
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory. Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
@@ -112,8 +112,9 @@ let BMWAndAudi = [];
 let beaudi = inventory.map(a => a.car_make);
   for (let i = 0; i < beaudi.length; i++){
     if (beaudi[i] == "Audi" || beaudi[i] == "BMW") {
-      BMWAndAudi.push(beaudi[i])
+      BMWAndAudi.push(inventory[i])
     }
   }
-JSON.stringify(BMWAndAudi);
-console.log(BMWAndAudi);
+
+let result = JSON.stringify(BMWAndAudi, null, '...');
+console.log(result)
