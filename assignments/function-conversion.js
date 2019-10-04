@@ -8,12 +8,15 @@
 let myFunction = () => {
     console.log(`Function was invoked!`)
 }
-myFunction()
+myFunction();
 
 // let anotherFunction = function (param) {
 //   return param;
 // };
 // anotherFunction("Example");
+
+let anotherFunction = (param) => param;
+console.log(anotherFunction(`Testing`));
 
 // let add = function (param1, param2) {
 //   return param1 + param2;
